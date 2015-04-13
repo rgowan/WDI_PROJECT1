@@ -18,7 +18,7 @@
       <tr>
         <td><%= song.title %></td>
         <td><%= song.artist %></td>
-        <td><%= image_tag song.artwork.url %></td>
+        <td><%= image_tag song.artwork.thumb.url %></td>
         <td><%= song.music_file %></td>
         <td><%= link_to 'Show', song %></td>
         <td><%= link_to 'Edit', edit_song_path(song) %></td>
