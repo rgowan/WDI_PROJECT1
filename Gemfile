@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'carrierwave', '0.10.0'
+gem 'rmagick'
+gem 'foundation-rails'
+gem 'devise'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
