@@ -1,7 +1,6 @@
-<li>
   <ul>
-    <li><%= comment.title %></li>
     <li><%= comment.user.try(:stage_name) %></li>
+    <li><%= image_tag comment.user.profile_picture.thumb.url %></li>
     <li><%= comment.comment %></li>
+    <li><%= link_to 'Delete Comment', comment.user, method: :delete, data: { confirm: 'Are you sure?' } %></li>
   </ul>
-</li>

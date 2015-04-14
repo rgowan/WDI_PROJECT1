@@ -33,7 +33,11 @@ class ProfileUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_fill => [100, 100]
+    process :resize_to_fill => [50, 50]
+  end
+
+  version :detail do
+    process :resize_to_fill => [300, 300]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

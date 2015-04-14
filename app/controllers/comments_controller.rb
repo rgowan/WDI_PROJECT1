@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
       end
     end
   end
-
+  
   protected
   def set_commentable
     # Song = Class.camelize.constantize

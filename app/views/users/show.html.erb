@@ -1,0 +1,28 @@
+ <p id="notice"><%= notice %></p>
+
+<p>
+ <strong>Profile Picture:</strong>
+ <%= image_tag @user.profile_picture.detail.url %>
+</p>
+
+<p>
+ <strong>Name:</strong>
+ <%= @user.full_name %>
+</p>
+
+<p>
+ <strong>Stage Name:</strong>
+ <%= @user.stage_name %>
+</p>
+
+<p>
+ <strong>Age:</strong>
+ <%= @user.age %>
+</p>
+
+<p>
+ <strong>Email:</strong>
+ <%= @user.email %>
+</p>
+
+<%= link_to 'Back', users_path %>
