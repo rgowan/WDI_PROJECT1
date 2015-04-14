@@ -1,0 +1,7 @@
+<li>
+  <ul>
+    <li><%= comment.title %></li>
+    <li><%= comment.user.try(:stage_name) %></li>
+    <li><%= comment.comment %></li>
+  </ul>
+</li>

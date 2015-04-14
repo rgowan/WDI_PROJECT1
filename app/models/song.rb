@@ -1,4 +1,6 @@
 class Song < ActiveRecord::Base
+
+  acts_as_commentable
   
   # Uploader for Song Music File
   mount_uploader :music_file, SongUploader
