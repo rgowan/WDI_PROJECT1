@@ -1,33 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Beatbox</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "Beatbox" %></title>
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<header>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/songs">Song's</a></li>
-      <li><a href="/users/sign_up">Sign Up</a></li>
-    </ul>
-  </nav>
-</header>
-<body>
-<div class='login'>
-  <% if current_user %>
-    <%= current_user.full_name %>
-    <%= link_to "Edit Profile", edit_user_registration_path %>
+
+<body class="row">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/songs">Songs</a></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li><%= link_to "Register", new_user_registration_path %></li>
+      </ul>
+    </nav>
+  </header>
+  <div class='login'>
+    <% if current_user %>
+    <%= current_user.email %>
+    <%= link_to "Edit", edit_user_registration_path(current_user) %>
     <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-  <% else %>
+    <% else %>
     <%= link_to "Sign In", new_user_session_path %>
     <%= link_to "Register", new_user_registration_path %>
-  <% end %>
-</div>
-
-<%= yield %>
-
+    <% end %>
+  </div>
+  <main class="row">
+    <%= yield %>
+  </main>
 </body>
 </html>
