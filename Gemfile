@@ -5,6 +5,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'foundation-rails'
 gem 'acts_as_commentable'
+gem 'acts-as-taggable-on'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
