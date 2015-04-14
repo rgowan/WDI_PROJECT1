@@ -7,7 +7,7 @@
 
 <p>
   <strong>Artist:</strong>
-  <%= @song.artist %>
+  <%= current_user.stage_name %>
 </p>
 
 <p>
@@ -16,8 +16,8 @@
 </p>
 
 <p>
-<strong>Artwork:</strong>
-  <%= image_tag @song.artwork.url %>
+  <strong>Artwork:</strong>
+  <%= image_tag @song.artwork.detail.url %>
 </p>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |
