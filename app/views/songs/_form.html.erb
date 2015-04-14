@@ -16,6 +16,10 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :artist %><br>
+    <%= f.text_field :artist %>
+  </div>
+  <div class="field">
     <%= f.label :music_file %><br>
     <%= f.file_field :music_file %>
   </div>
@@ -23,6 +27,7 @@
     <%= f.label :artwork %><br>
     <%= f.file_field :artwork %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'acts_as_commentable'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
