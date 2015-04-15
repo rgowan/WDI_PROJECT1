@@ -1,34 +1,34 @@
-  <%= form_for(@song) do |f| %>
-  <% if @song.errors.any? %>
+    <%= form_for(@song) do |f| %>
+    <% if @song.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
 
       <ul>
-      <% @song.errors.full_messages.each do |message| %>
+        <% @song.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :music_file %><br>
-    <%= f.file_field :music_file %>
-  </div>
-  <div class="field">
-    <%= f.label :artwork %><br>
-    <%= f.file_field :artwork %>
-  </div>
-  <div class="field">
-    <%= f.label :tag_list, "Tags (separated by commas)" %><br>
-    <%= f.text_field :tag_list %>
-  </div>
+    <div class="field">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :music_file %><br>
+      <%= f.file_field :music_file %>
+    </div>
+    <div class="field">
+      <%= f.label :artwork %><br>
+      <%= f.file_field :artwork %>
+    </div>
+    <div class="field">
+      <%= f.label :tag_list, "Tags (separated by commas)" %><br>
+      <%= f.text_field :tag_list %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    <% end %>

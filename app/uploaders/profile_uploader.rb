@@ -36,6 +36,10 @@ class ProfileUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [50, 50]
   end
 
+  version :thumbhomepage do
+    process :resize_to_fill => [30, 30]
+  end
+
   version :detail do
     process :resize_to_fill => [300, 300]
   end
