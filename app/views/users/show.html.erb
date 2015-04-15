@@ -1,38 +1,23 @@
- <p id="notice"><%= notice %></p>
+<header class="profile-header">
+ <%= image_tag @user.profile_picture.detail.url %><br />
 
-<p>
- <strong>Profile Picture:</strong>
- <%= image_tag @user.profile_picture.detail.url %>
-</p>
-
-<p>
  <strong>Name:</strong>
- <%= @user.full_name %>
-</p>
+ <%= @user.full_name %><br />
 
-<p>
  <strong>Stage Name:</strong>
- <%= @user.stage_name %>
-</p>
+ <%= @user.stage_name %><br />
 
-<p>
  <strong>Age:</strong>
  <%= @user.age %>
-</p>
 
-<p>
  <strong>Email:</strong>
  <%= @user.email %>
-</p>
 
+ </header>
+
+<h1><%= @user.stage_name %>'s Beatbox</h1>
 <p>
-  <strong>Songs:</strong>
-  <% @user.songs.each do |s| %>
-  <li>
-   <%= link_to "#{s.title}", s %>
-   <%= image_tag s.artwork.thumb %>
-   <% end %>
- </li>
+  <%= render @user.songs %>
 </p>
 
 <%= link_to 'Back', users_path %>

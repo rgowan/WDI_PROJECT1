@@ -15,3 +15,13 @@
  *= require foundation_and_overrides
 
  */
+
+body, h1, h2, h3, h4, h5, div, main {
+  text-align: center;
+  margin: 0px auto;
+}
+
+header.profile-header {
+  padding: 25px 0 25px 0;
+  background-color: blue;
+}

@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
-    @q = User.ransack(params[:q])
-    @users = @q.result(distinct: true)
+    if params[:q].present?
+      @q = User.ransack(params[:q])
+      @users = @q.result(distinct: true)
+    else 
+      @users = User.all
+    end
   end
 
   def show

@@ -33,15 +33,34 @@
             <li class="has-dropdown">
               <a href="">Account</a>
               <ul class="dropdown">
-                <li><%= link_to "Sign In", new_user_session_path %></li>
-                <li><%= link_to "Edit Account", edit_user_registration_path(current_user) %></li>
-                <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+                <% if user_signed_in? %>
+                <li class="item"><%= link_to('Edit Account', edit_user_registration_path(@user)) %></li>
+
+                <li class="item"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                </li>
+                <% else %>
+                <li class="item"><%= link_to('Login', new_user_session_path) %></li>
+                <li><%= link_to "Register", new_user_registration_path %></li>
+                <% end %>
               </ul>
             </li>
           </ul>
 
           <!-- Left Nav Section -->
           <ul class="left">
+            <!-- Or content_for -->
+            <% if params[:controller] != "static_pages" && params[:action] != "home" %>
+            <li class="has-form">
+              <div class="row collapse">
+                <div class="large-8 small-9 columns">
+                  <input type="search" placeholder="Search">
+                </div>
+                <div class="large-4 small-3 columns">
+                  <a href="" class="alert button expand">Search</a>
+                </div>
+              </div>
+            </li>
+            <% end %>
             <li><a href="/">Home</a></li>
             <li><%= link_to "Songs", songs_path %></li>
             <li><%= link_to "Users", users_path %></li>
@@ -49,9 +68,9 @@
         </section>
       </nav>
     </header>
-    <main class="row">  
-      <p id="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <main class="row">
+    <label class="notice"><%= notice %></label>
+    <label class="alert"><%= alert %></label>
       <%= yield %>
     </main>
   </body>
