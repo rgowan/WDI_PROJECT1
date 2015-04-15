@@ -4,10 +4,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # Uploader for User Profile Picture
-  mount_uploader :profile_picture, ProfileUploader
   # Assosiation to Songs
   has_many :songs, dependent: :destroy
+
+  # Uploader for User Profile Picture
+  mount_uploader :profile_picture, ProfileUploader
 
   # User Validations
   validates :full_name, presence: true, length: {in: 6..50}

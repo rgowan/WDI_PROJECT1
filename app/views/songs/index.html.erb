@@ -1,33 +1,23 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Songs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Artist</th>
-      <th>Artwork</th>
-      <th>Song File</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @songs.each do |song| %>
-    <tr>
-      <td><%= song.title %></td>
-      <td><%= song.artist %></td>
-      <td><%= image_tag song.artwork.thumb.url %></td>
-      <td><%= song.music_file %></td>
-      <td><%= link_to 'Show', song %></td>
-      <td><%= link_to 'Edit', edit_song_path(song) %></td>
-      <td><%= link_to 'Delete', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
 <%= link_to 'New Song', new_song_path %>
+
+<div id="tag_cloud">
+  <% tag_cloud Song.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
+</div>
+
+<ul class ="large_block_grid-4">
+  <% @songs.each do |song| %>
+
+  <li class="photo-thumb">
+    <%= image_tag (song.artwork.thumb.url) %>
+    <h3><%= song.title %></h3>
+    <h4><%= song.user.stage_name %></h4>
+    <p><%= raw song.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %></p>
+    <%= link_to 'Show', song %>
+    <%= link_to 'Edit', edit_song_path(song) %>
+    <%= link_to 'Delete', song, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </li>
+  <% end %>
+</ul> 

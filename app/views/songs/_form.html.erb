@@ -1,4 +1,4 @@
-<%= form_for(@song) do |f| %>
+  <%= form_for(@song) do |f| %>
   <% if @song.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
@@ -16,16 +16,16 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :artist %><br>
-    <%= f.text_field :artist %>
-  </div>
-  <div class="field">
     <%= f.label :music_file %><br>
     <%= f.file_field :music_file %>
   </div>
   <div class="field">
     <%= f.label :artwork %><br>
     <%= f.file_field :artwork %>
+  </div>
+  <div class="field">
+    <%= f.label :tag_list, "Tags (separated by commas)" %><br>
+    <%= f.text_field :tag_list %>
   </div>
 
   <div class="actions">
