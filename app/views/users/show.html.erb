@@ -25,4 +25,14 @@
  <%= @user.email %>
 </p>
 
+<p>
+  <strong>Songs:</strong>
+  <% @user.songs.each do |s| %>
+  <li>
+   <%= link_to "#{s.title}", s %>
+   <%= image_tag s.artwork.thumb %>
+   <% end %>
+ </li>
+</p>
+
 <%= link_to 'Back', users_path %>
