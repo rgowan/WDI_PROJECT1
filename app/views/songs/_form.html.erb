@@ -10,25 +10,26 @@
       </ul>
     </div>
     <% end %>
+    <ul>
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :music_file %>
+        <%= f.file_field :music_file %>
+      </div>
+      <div class="field">
+        <%= f.label :artwork %>
+        <%= f.file_field :artwork %>
+      </div>
+      <div class="field">
+        <%= f.label :tag_list, "Tags (separated by commas)" %>
+        <%= f.text_field :tag_list %>
+      </div>
 
-    <div class="field">
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
-    </div>
-    <div class="field">
-      <%= f.label :music_file %><br>
-      <%= f.file_field :music_file %>
-    </div>
-    <div class="field">
-      <%= f.label :artwork %><br>
-      <%= f.file_field :artwork %>
-    </div>
-    <div class="field">
-      <%= f.label :tag_list, "Tags (separated by commas)" %><br>
-      <%= f.text_field :tag_list %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-    <% end %>
+      <div class="actions">
+        <%= f.submit :class => "button expand" %>
+      </div>
+      <% end %>
+    </ul>

@@ -1,0 +1,37 @@
+
+
+.user h3 {
+  font-size: 20px;
+  // color: white
+}
+
+.user h4 {
+  font-size: 15px;
+  // color: white
+}
+
+.user {
+  padding: 15px;
+  line-height: 16px;
+}
+
+.user[class*="column"] + [class*="column"]:last-child {
+  float: left;
+}
+
+.user ul {
+  border: 2px solid #e1e8ed;
+  border-radius: 5px 5px 5px 5px;
+  padding: 15px;
+  background: white;
+}
+
+.user ul:hover {
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.5); 
+}
+
+.user img {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px 5px 5px 5px;
+  // box-shadow: 2px 2px 6px rgba(0,0,0,0.5)
+}

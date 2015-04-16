@@ -1,21 +1,12 @@
 <header class="profile-header" >
  <%= image_tag @user.profile_picture.detail.url :class => "profile-picture" %><br />
 
- <strong><%= @user.stage_name %></strong><br />
-
- <em><%= @user.full_name %></em><br />
-
- <strong>Age:</strong>
- <%= @user.age %>
-
- <strong>Email:</strong>
- <%= @user.email %>
-
+ <h1><%= @user.stage_name %> <%= image_tag("user-icon.png", width: 30) %></h1>
+ <h2><em><%= @user.full_name %></em></h2>
+ <strong>Age: <%= @user.age %></strong>
+ <strong>Email: <%= @user.email %></strong>
  </header>
 
-<h1><%= @user.stage_name %>'s Beatbox</h1>
-<p>
+<ul>
   <%= render @user.songs %>
-</p>
-
-<%= link_to 'Back', users_path %>
+</ul>

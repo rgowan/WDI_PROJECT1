@@ -1,3 +1,89 @@
-// Place all the styles related to the Songs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+li.photo-thumb h3 h4 {
+  position: absolute;
+  text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  color: #fff;
+  bottom: 30px;
+  left: 0;
+  right: 0px;
+  text-align: center;
+  margin: 0;
+  display: none;
+}
+
+.song h3 {
+  font-size: 20px;
+  // color: white
+}
+
+.song h4 {
+  font-size: 15px;
+  // color: white
+}
+
+.song {
+  padding: 15px;
+  line-height: 16px;
+}
+
+.song[class*="column"] + [class*="column"]:last-child {
+  float: left;
+}
+
+.song ul {
+  border: 2px solid #e1e8ed;
+  border-radius: 5px 5px 5px 5px;
+  padding: 15px;
+  background: white;
+}
+
+.song ul:hover {
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.5); 
+}
+
+.song img {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px 5px 5px 5px;
+  // box-shadow: 2px 2px 6px rgba(0,0,0,0.5)
+}
+
+.song button, .button {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 700;
+  border-radius: 5px 5px 5px 5px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.player {
+  position: relative;
+  min-height: 500px;
+  image-repeat: no-repeat;
+}
+
+.player audio {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+div.large-6.medium-6.columns {
+  padding-top: 25px;
+}
+
+div.song-desc {
+  padding-top: 10px;
+}
+
+textarea#comment_comment{
+  width: 1000px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+h2 a {
+  color: black;
+}
+
+h2 a.hover {
+  color: black;
+}

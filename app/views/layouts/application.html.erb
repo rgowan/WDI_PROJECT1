@@ -6,19 +6,20 @@
 
   <title><%= content_for?(:title) ? yield(:title) : "Beatbox" %>
   </title>
-
+  <link href='http://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Sarpanch:400,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Sarpanch:400,700' rel='stylesheet' type='text/css'>
 </head>
 
-<body class="row">
-  <header class="row">
-    <nav class="top-bar" data-topbar role="navigation">
+<body <% if params[:controller] == "static_pages" && params[:action] == "home" %>class="home"<% end %>>
+  <header>
+    <nav class="top-bar row" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
+          <%= image_tag("topbar-icon.png", width: 40) %>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>
@@ -26,10 +27,14 @@
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
-          <li id="current-user"><% if current_user %>
-            <%= image_tag current_user.profile_picture.thumbhomepage.url, :id => "top-bar-picture" %>
-            <%= current_user.stage_name %>
-            <% end %></li>
+          <% if current_user %>
+            <li>
+              <%= link_to user_path(current_user) do %>
+                <%= image_tag current_user.profile_picture.thumbhomepage.url %>
+                <%= current_user.stage_name %>
+              <% end %>
+            </li>
+          <% end %>
             <li class="has-dropdown">
               <a href="">Account</a>
               <ul class="dropdown">
@@ -66,11 +71,17 @@
           </ul>
         </section>
       </nav>
-      <%= image_tag("topbarline.png") %>
     </header>
+
+    <% if notice || alert %>
+      <div data-alert class="alert-box">
+        <%= notice %>
+        <%= alert %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+
     <main class="row">
-      <label class="notice"><%= notice %></label>
-      <label class="alert"><%= alert %></label>
       <%= yield %>
     </main>
   </body>

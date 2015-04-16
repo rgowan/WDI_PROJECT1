@@ -1,25 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Beatbox</title>
-</head>
-<body>
-  <header class="homepage-background">
-    <h1 class="homepage-title">BEATBOX</h1>
-    <h2 class="homepage-subtitle">Put your beats in a box</h2>
-    <div class="homepage-searchbar">
-      <%= search_form_for @q do |f| %>
+<h1 class="homepage-title">BEATBOX</h1>
+<h2 class="homepage-subtitle">Put your beats in a box</h2>
+<div class="search">
+    <%= search_form_for @q do |f| %>
       <%= f.text_field :stage_name_cont, :placeholder => "Search Artists", :class => "homepage-searchbar" %>
-    </div>
-    <div class="homepage-button">
       <%= f.submit :class => "button tiny" %>
-    </div>
     <% end %>
-  </div>
-  <h3 class="homepage-signin"><%= link_to "Sign In", new_user_session_path %></h3>
-  <h3 class="homepage-register"><%= link_to "Register", new_user_registration_path %></h3>
-</div>  
-</header>
-</body>
-</html>
-
+</div>
+<h3 class="homepage-signin"><%= link_to "Sign In", new_user_session_path %></h3>
+<h3 class="homepage-register"><%= link_to "Register", new_user_registration_path %></h3>

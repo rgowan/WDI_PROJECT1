@@ -1,31 +1,28 @@
-<p>
-  <strong>Title:</strong>
-  <%= @song.title %>
-</p>
+<div class="row">
+  <div class="large-6 medium-6 columns">
+  <ul>
+    <div class="player" style="background-image: url('<%= @song.artwork.detail.url %>')">
+      <audio src="<%= @song.music_file.url %>" controls></audio>
+    </div>
+  </div>
+  </ul>
+  <ul>
+  <div class="large-6 medium-6 columns">
+    <div class="song-desc">
+      <h1>Title: <%= @song.title %></h1>
+      <h2>Artist: <%= @song.user.stage_name %></h2>
+    <p>
+      <strong>Tags:</strong>
+      <%= raw @song.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %>
+    </p>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @song.user.stage_name %>
-</p>
-
-<p>
-  <strong>Song:</strong>
-  <audio src="<%= @song.music_file.url %>" controls></audio>
-</p>
-
-<p>
-  <strong>Artwork:</strong>
-  <%= image_tag @song.artwork.detail.url %>
-</p>
-
-<p>
-  <strong>Tags:</strong>
-  <%= raw @song.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %>
-</p>
 
 <%= render partial: 'comments/form', locals: { commentable: @song } %>
 
-<ul>
+<ul class="row">
   <%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @song} %>
 </ul>
 

@@ -1,4 +1,6 @@
 <div class="tag_cloud">
+<h1>Tag Cloud</h1>
+<h2><%= link_to "Back to Songs", songs_path %></h2>
 <% tag_cloud Song.tag_counts, %w[s m l] do |tag, css_class| %>
   <%= link_to tag.name, tag_path(tag.name), class: css_class %>
 <% end %>

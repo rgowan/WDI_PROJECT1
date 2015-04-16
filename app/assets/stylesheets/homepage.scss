@@ -1,0 +1,93 @@
+body.home {
+  background-image: url(https://c2.staticflickr.com/4/3164/2831212101_9e9fc3bbdb_b.jpg);
+  background-size: cover;
+  // background-color: #3366CC; // #333366;
+}
+
+h1.homepage-title {
+  padding: 0px;
+}
+
+body.home h1, 
+body.home h2 {
+ font-family: 'Dosis', sans-serif;
+ color: white;
+}
+
+body.home h1 {
+  text-shadow: 8px 8px 20px rgba(0,0,0,0.5);
+  font-size: 125px;
+  font-weight: bold;
+  margin: 100px auto 0;
+}
+
+body.home h2 {
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);  
+  font-size: 18px;
+}
+
+body.home .search {
+  margin: 0 auto;
+  max-width: 300px;
+  clear: both;
+  overflow: hidden;
+  margin: 5px auto;
+}
+
+body.home .search input[type="text"] {
+  width: 200px;
+  margin: 0;
+  float: left;
+  border-radius: 3px 0 0 3px;
+  height: 39px;
+}
+
+body.home .search input[type="submit"] {
+  width: 100px;
+  margin: 0;
+  float: left;
+  border-radius: 0 3px 3px 0;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); 
+}
+
+ h3.homepage-signin {
+  margin: 0 auto;    
+  color: black;
+  font-size: 18px;
+  left: 730px;
+  top: 290px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); 
+}
+
+h3.homepage-signin a {
+  color: white
+}
+
+ h3.homepage-register {
+  margin: 0 auto;   
+  color: black;
+  font-size: 18px;
+  left: 815px;
+  top: 290px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); 
+}
+
+h3.homepage-register a {
+  color: white;
+}
+
+
+.homepage-logo {
+  z-index: 100;
+  position: absolute;    
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  left: 700px;
+  top: 90px;
+}
+
+form#user_search {
+  padding-top: 0px;
+}
