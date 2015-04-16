@@ -21,8 +21,156 @@ body, h1, h2, h3, h4, h5, div, main {
   margin: 0px auto;
 }
 
+li.name {
+  padding-left: 10px;
+}
+
 header.profile-header {
   padding: 30px 0 25px 0;
-  background-color: blue;
+  background-image: url(http://headerart.weebly.com/uploads/5/7/5/7/5757212/9671295_orig.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
+
+#tag_cloud {
+  margin: 0 auto;
+  width: 400px;
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+}
+
+
+#current-user {
+  color: white;
+  padding-top: 3.75px;
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+#top-bar-picture {
+  border: 1.5px solid white;
+}
+
+div.topbar-line {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+button.alert, .button.alert {
+  background-color: #3366CC;
+}
+
+.top-bar-section ul li > a {
+  color: black;
+}
+
+.top-bar-section .has-dropdown > a:after {
+  color: black;
+}
+
+main.row {
+  background-color: #3366CC;
+}
+
+/*HOMEPAGE*/
+
+header.homepage-background {
+  background-color: #333366;
+  height: 550px;
+
+}
+
+h1.homepage-title {
+  font-family: 'Sarpanch', sans-serif;
+  text-shadow: 8px 8px 20px rgba(0,0,0,0.5);
+  z-index: 100;
+  position: absolute;    
+  color: white;
+  font-size: 46px;
+  font-weight: bold;
+  left: 697px;
+  top: 176px;
+}
+
+h2.homepage-subtitle {
+  font-family: 'Sarpanch', sans-serif;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  z-index: 100;
+  position: absolute;    
+  color: white;
+  font-size: 18px;
+  left: 703px;
+  top: 225px;
+}
+
+ h3.homepage-signin {
+  z-index: 100;
+  position: absolute;    
+  color: black;
+  font-size: 18px;
+  left: 730px;
+  top: 290px;
+}
+
+ h3.homepage-register {
+  z-index: 100;
+  position: absolute;    
+  color: black;
+  font-size: 18px;
+  left: 815px;
+  top: 290px;
+}
+
+.homepage-logo {
+  z-index: 100;
+  position: absolute;    
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  left: 700px;
+  top: 90px;
+}
+
+div.homepage-searchbar {
+  width: 200px;
+  position: absolute;
+  top: 250px;
+  left: 670px;
+  border-radius: 10px;
+}
+
+div.homepage-button {
+  position: absolute;
+  top: 250px;
+  left: 875px;
+}
+
+/*SONGS*/
+
+li.photo-thumb h3 h4 {
+  position: absolute;
+  text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  color: #fff;
+  bottom: 30px;
+  left: 0;
+  right: 0px;
+  text-align: center;
+  margin: 0;
+  display: none;
+}
+
+h3.song-title {
+  font-size: 25px;
+}
+
+h4.song-artist {
+  font-size: 20px;
+}
+
+
+
+
 

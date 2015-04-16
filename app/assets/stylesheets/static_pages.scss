@@ -1,22 +1,3 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#tag_cloud {
-  margin: 0 auto;
-  width: 400px;
-  line-height: 1.6em;
-  .s { font-size: 0.8em; }
-  .m { font-size: 1.2em; }
-  .l { font-size: 1.8em; }
-}
-
-#current-user {
-  color: white;
-  padding-top: 7px;
-  padding-right: 10px;
-  font-size: 12px;
-}
-
-#top-bar-picture {
-  border: 1.5px solid white;
-}

@@ -1,7 +1,7 @@
 <li class="photo-thumb">
   <%= link_to image_tag(song.artwork.thumb.url), song %>
-  <h3><%= song.title %></h3>
-  <h4><%= song.user.stage_name %></h4>
+  <h3 class="song-title"><%= song.title %></h3>
+  <h4 class="song-artist"><%= song.user.stage_name %></h4>
   <p><%= raw song.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %></p>
   <%= link_to 'Edit', edit_song_path(song) %>
   <%= link_to 'Delete', song, method: :delete, data: { confirm: 'Are you sure?' } %>
