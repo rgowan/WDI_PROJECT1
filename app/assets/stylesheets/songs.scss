@@ -57,7 +57,9 @@ li.photo-thumb h3 h4 {
   position: relative;
   min-height: 500px;
   image-repeat: no-repeat;
+  border-radius: 5px 5px 5px 5px;
 }
+
 
 .player audio {
   width: 100%;
@@ -72,11 +74,10 @@ div.large-6.medium-6.columns {
 }
 
 div.song-desc {
-  padding-top: 10px;
+  padding-top: 80px;
 }
 
 textarea#comment_comment{
-  width: 1000px;
   border-radius: 5px 5px 5px 5px;
 }
 
@@ -86,4 +87,8 @@ h2 a {
 
 h2 a.hover {
   color: black;
+}
+
+div.row {
+  padding-bottom: 25px;
 }

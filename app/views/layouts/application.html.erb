@@ -7,7 +7,7 @@
   <title><%= content_for?(:title) ? yield(:title) : "Beatbox" %>
   </title>
   <link href='http://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Sarpanch:400,700' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="browser.png" href="favicon-16x16.png" sizes="16x16" />
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= javascript_include_tag "application" %>
@@ -28,61 +28,58 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <% if current_user %>
-            <li>
-              <%= link_to user_path(current_user) do %>
-                <%= image_tag current_user.profile_picture.thumbhomepage.url %>
-                <%= current_user.stage_name %>
-              <% end %>
-            </li>
+          <li>
+            <%= link_to user_path(current_user) do %>
+            <%= image_tag current_user.profile_picture.thumbhomepage.url %>
+            <%= current_user.stage_name %>
+            <% end %>
+          </li>
           <% end %>
-            <li class="has-dropdown">
-              <a href="">Account</a>
-              <ul class="dropdown">
-                <% if user_signed_in? %>
-                <li class="item"><%= link_to('Edit Account', edit_user_registration_path(@user)) %></li>
+          <li class="has-dropdown">
+            <a href="">Account</a>
+            <ul class="dropdown">
+              <% if user_signed_in? %>
+              <li class="item"><%= link_to('Edit Account', edit_user_registration_path(@user)) %></li>
 
-                <li class="item"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-                </li>
-                <% else %>
-                <li class="item"><%= link_to('Login', new_user_session_path) %></li>
-                <li><%= link_to "Register", new_user_registration_path %></li>
-                <% end %>
-              </ul>
-            </li>
-          </ul>
+              <li class="item"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+              </li>
+              <% else %>
+              <li class="item"><%= link_to('Login', new_user_session_path) %></li>
+              <li><%= link_to "Register", new_user_registration_path %></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
 
-          <!-- Left Nav Section -->
-          <ul class="left">
-            <!-- Or content_for -->
-            <li class="has-form">
-              <div class="row collapse">
-                <div class="large-8 small-9 columns">
-                  <input type="search" placeholder="Search">
-                </div>
-                <div class="large-4 small-3 columns">
-                  <a href="" class="alert button expand">Search</a>
-                </div>
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <!-- Or content_for -->
+          <li class="has-form">
+            <div class="row collapse">
+              <div class="large-8 small-9 columns">
+                <input type="search" placeholder="Search Beatbox">
               </div>
-            </li>
-            
-            <li><a href="/">Home</a></li>
-            <li><%= link_to "Songs", songs_path %></li>
-            <li><%= link_to "Users", users_path %></li>
-          </ul>
-        </section>
-      </nav>
-    </header>
+            </div>
+          </li>
+          
+          <li><a href="/">Home</a></li>
+          <li><%= link_to "Songs", songs_path %></li>
+          <li><%= link_to "Users", users_path %></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
 
-    <% if notice || alert %>
-      <div data-alert class="alert-box">
-        <%= notice %>
-        <%= alert %>
-        <a href="#" class="close">&times;</a>
-      </div>
-    <% end %>
+  <% if notice || alert %>
+  <div data-alert class="alert-box">
+    <%= notice %>
+    <%= alert %>
+    <a href="#" class="close">&times;</a>
+  </div>
+  <% end %>
 
-    <main class="row">
-      <%= yield %>
-    </main>
-  </body>
-  </html>
+  <main class="row">
+    <%= yield %>
+  </main>
+</body>
+</html>

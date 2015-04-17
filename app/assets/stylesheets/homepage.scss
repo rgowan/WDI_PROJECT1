@@ -1,11 +1,10 @@
 body.home {
-  background-image: url(https://c2.staticflickr.com/4/3164/2831212101_9e9fc3bbdb_b.jpg);
+  background-image: url(http://1.bp.blogspot.com/-nor4T0x1o6Y/UUb2-VvwcUI/AAAAAAAAF5o/T0ZWP9MYSS4/s1600/loud-music.jpg);
   background-size: cover;
-  // background-color: #3366CC; // #333366;
+  background-repeat: no-repeat;
 }
 
 h1.homepage-title {
-  padding: 0px;
 }
 
 body.home h1, 
@@ -15,15 +14,16 @@ body.home h2 {
 }
 
 body.home h1 {
-  text-shadow: 8px 8px 20px rgba(0,0,0,0.5);
+  text-shadow: 10px 4px 6px rgba(0,0,0,0.5);
   font-size: 125px;
-  font-weight: bold;
-  margin: 100px auto 0;
+  font-weight: 700;
+  margin: 90px auto 0;
 }
 
 body.home h2 {
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);  
-  font-size: 18px;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+  font-size: 20px;
+  margin: -30px auto 0;
 }
 
 body.home .search {
@@ -32,6 +32,7 @@ body.home .search {
   clear: both;
   overflow: hidden;
   margin: 5px auto;
+  padding-bottom: 10px;
 }
 
 body.home .search input[type="text"] {
@@ -39,16 +40,22 @@ body.home .search input[type="text"] {
   margin: 0;
   float: left;
   border-radius: 3px 0 0 3px;
-  height: 39px;
+  height: 32.25px;
 }
 
 body.home .search input[type="submit"] {
+  background-color: #339933;
   width: 100px;
   margin: 0;
   float: left;
   border-radius: 0 3px 3px 0;
   font-weight: 700;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); 
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
+
+div.social-network img {
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
  h3.homepage-signin {
@@ -57,7 +64,7 @@ body.home .search input[type="submit"] {
   font-size: 18px;
   left: 730px;
   top: 290px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); 
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
 }
 
 h3.homepage-signin a {
@@ -70,13 +77,12 @@ h3.homepage-signin a {
   font-size: 18px;
   left: 815px;
   top: 290px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); 
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
 }
 
 h3.homepage-register a {
   color: white;
 }
-
 
 .homepage-logo {
   z-index: 100;
@@ -90,4 +96,5 @@ h3.homepage-register a {
 
 form#user_search {
   padding-top: 0px;
+  height: 10px;
 }

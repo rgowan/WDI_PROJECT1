@@ -1,30 +1,25 @@
 <div class="row">
   <div class="large-6 medium-6 columns">
-  <ul>
-    <div class="player" style="background-image: url('<%= @song.artwork.detail.url %>')">
-      <audio src="<%= @song.music_file.url %>" controls></audio>
+    <ul>
+      <div class="player" style="background-image: url('<%= @song.artwork.detail.url %>')">
+        <audio src="<%= @song.music_file.url %>" controls></audio>
+      </div>
     </div>
-  </div>
   </ul>
   <ul>
-  <div class="large-6 medium-6 columns">
-    <div class="song-desc">
-      <h1>Title: <%= @song.title %></h1>
-      <h2>Artist: <%= @song.user.stage_name %></h2>
-    <p>
-      <strong>Tags:</strong>
-      <%= raw @song.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %>
-    </p>
+    <div class="large-6 medium-6 columns">
+      <div class="song-desc">
+        <h1>Title: <%= @song.title %></h1>
+        <h2>Artist: <%= link_to @song.user.stage_name, @user %></h2>
+        <p>
+          <strong>Tags:</strong>
+          <%= raw @song.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %>
+        </p>
+        <p><%= render partial: 'comments/form', locals: { commentable: @song } %></p>
+      </div>
     </div>
-  </div>
+  </ul>
 </div>
-
-
-<%= render partial: 'comments/form', locals: { commentable: @song } %>
-
 <ul class="row">
   <%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @song} %>
 </ul>
-
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', songs_path %>

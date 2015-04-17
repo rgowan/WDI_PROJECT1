@@ -1,5 +1,5 @@
 header {
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 2px solid rgba(0,0,0,0.05);
   font-family: 'Dosis', sans-serif;
   background: #fff;
 }
@@ -10,19 +10,15 @@ header .top-bar-section ul li > a {
   color: #66757f;
 }
 
+header .top-bar-section ul li:hover a:hover {
+  color: #66757f;
+}
+
 header .top-bar input {
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px;
+  width: 170px; 
 }
 
-header button.alert, 
-header .button.alert {
-  background-color: #3366CC;
-  border-radius: 0 3px 3px 0;
-}
-
-header .button.alert:hover {
-  background-color: #3366CC;
-}
 
 header .top-bar ul.right li:first-child {
   color: white;
@@ -37,25 +33,4 @@ header .top-bar ul.right li:first-child img {
 
 header .top-bar ul.right li:first-child a:hover > img {
   border: 2px solid #6699CC;
-}
-
-
-// Rane
-
-div.topbar-line {
-  border: 0px;
-  padding: 0px;
-  margin: 0px;
-}
-
-.top-bar-section .has-dropdown > a:after {
-  color: black;
-}
-
-.top-bar-section ul li:hover:not(.has-form) > a {
-  color: #66757f;
-}
-
-a.alert.button.expand {
-  background-color: 009933;
 }

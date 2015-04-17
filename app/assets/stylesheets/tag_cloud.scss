@@ -1,12 +1,15 @@
 #tag_cloud {
   margin: 0 auto;
-  width: 400px;
+  width: 700px;
   line-height: 1.6em;
   .s { font-size: 0.8em; }
   .m { font-size: 1.2em; }
   .l { font-size: 1.8em; }
-  padding-top: 20px;
-  padding-bottom: 30px;
+}
+
+#tag_cloud {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .tag_cloud h2 {

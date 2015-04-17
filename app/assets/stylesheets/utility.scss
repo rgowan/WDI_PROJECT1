@@ -1,3 +1,11 @@
+body, h1, h2, h3, h4, h5, div, main, form {
+  text-align: center;
+  margin: 0px auto;
+  font-family: 'Dosis', sans-serif;
+  content: 'optimizeLegibility' !important;
+  -webkit-font-smoothing: antialiased;
+}
+
 ul,
 li,
 ul li ul, 
@@ -11,6 +19,25 @@ input {
   -webkit-font-smoothing: antialiased;
 }
 
+input.button.tiny {
+  border-radius: 3px;
+}
+
+input.button.expand {
+  
+}
+
 a {
   color: #66757f;
 }
+
+input {
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+input.button.expand {
+  background-color: #006699;
+  border-radius: 5px 5px 5px 5px;
+}
+

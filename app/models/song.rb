@@ -12,7 +12,7 @@ class Song < ActiveRecord::Base
   mount_uploader :artwork, ArtworkUploader
   
   # User Validations
-  validates :title, length: { maximum: 20 }
+  validates :title, length: { maximum: 50 }
 end
 
 

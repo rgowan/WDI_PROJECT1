@@ -1,7 +1,6 @@
 <%= form_for(:comment, url: comments_path(commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id)) do |f| %>
 
-  <%= f.label :comment %>
-  <%= f.text_area :comment, placeholder:"Comment"%>
-  <%= f.submit "Comment!" %>
+  <%= f.text_area :comment, placeholder:"Write a Comment" %>
+  <%= f.submit "Comment!", :class => "button tiny" %>
 
 <% end %>
