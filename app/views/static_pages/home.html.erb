@@ -5,8 +5,9 @@
   <%= f.text_field :stage_name_cont, :placeholder => "Search Artists", :class => "homepage-searchbar" %>
   <%= f.submit :class => "button tiny" %>
   <% end %>
-  <div class="social-network"><br>
-    <%= image_tag("social-media-icons.png", width: 150) %>
-  </div>
-  <h3 class="homepage-signin"><%= link_to "Sign In", new_user_session_path %></h3>
-  <h3 class="homepage-register"><%= link_to "Register", new_user_registration_path %></h3>
+</div>
+<div class="social-network"><br>
+  <%= image_tag("social-media-icons.png", width: 150) %>
+</div>
+<h3 class="homepage-signin"><%= link_to "Sign In", new_user_session_path %></h3>
+<h3 class="homepage-register"><%= link_to "Register", new_user_registration_path %></h3>
