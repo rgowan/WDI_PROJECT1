@@ -1,4 +1,4 @@
-![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png
 
 # GA WDI12 Project 1 - Beatbox
 
@@ -20,13 +20,13 @@ I was instantly motivated for this project because i enjoy listening to music an
 ## Screenshots 
 
 Homepage
-(http://i.imgur.com/Mcaue1W.jpg)
+http://i.imgur.com/Mcaue1W.jpg
 
 Songs Index
-(http://i.imgur.com/zc4VqIv.png)
+http://i.imgur.com/zc4VqIv.png
 
 Songs Show
-(http://i.imgur.com/SZRzS0f.jpg)
+http://i.imgur.com/SZRzS0f.jpg
 
 Users Show
-(http://i.imgur.com/i6czyCZ.jpg)
+http://i.imgur.com/i6czyCZ.jpg
