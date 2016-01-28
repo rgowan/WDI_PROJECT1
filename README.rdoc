@@ -1,4 +1,5 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
 # GA WDI12 Project 1 - Beatbox
 
 In my first project of my Web Development Imserive course with General Assembly, I was given the breif to create a self publishing music app built with Rails, using gems of our choice. 
@@ -19,13 +20,13 @@ I was instantly motivated for this project because i enjoy listening to music an
 ## Screenshots 
 
 Homepage
-![image](http://i.imgur.com/Mcaue1W.jpg)
+(http://i.imgur.com/Mcaue1W.jpg)
 
 Songs Index
-![image](http://i.imgur.com/zc4VqIv.png)
+(http://i.imgur.com/zc4VqIv.png)
 
 Songs Show
-![image](http://i.imgur.com/SZRzS0f.jpg)
+(http://i.imgur.com/SZRzS0f.jpg)
 
 Users Show
-![image](http://i.imgur.com/i6czyCZ.jpg)
+(http://i.imgur.com/i6czyCZ.jpg)
