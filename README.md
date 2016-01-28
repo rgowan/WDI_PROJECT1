@@ -1,28 +1,32 @@
-== README
+https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# GA WDI12 Project 1 - Beatbox
 
-Things you may want to cover:
+In my first project of my Web Development Imserive course with General Assembly, I was given the breif to create a self publishing music app built with Rails, using gems of our choice. 
 
-* Ruby version
+I was instantly motivated for this project because i enjoy listening to music and i felt like this breif really gave me the oportunity to practice my css, something i gravitated towards during the first weeks of the course. 
 
-* System dependencies
+**Beatbox is only available locally, screenshots are provided below**
 
-* Configuration
+## Gems used
+- deivse
+- carrierwave
+- rmagick
+- foundation-rails
+- acts as commentable
+- acts as taggable on
+- ransack
 
-* Database creation
+## Screenshots 
 
-* Database initialization
+Homepage
+http://i.imgur.com/Mcaue1W.jpg
 
-* How to run the test suite
+Songs Index
+http://i.imgur.com/zc4VqIv.png
 
-* Services (job queues, cache servers, search engines, etc.)
+Songs Show
+http://i.imgur.com/SZRzS0f.jpg
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Users Show
+http://i.imgur.com/i6czyCZ.jpg
