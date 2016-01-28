@@ -19,14 +19,10 @@ I was instantly motivated for this project because i enjoy listening to music an
 
 ## Screenshots 
 
-Homepage
 ![image](http://i.imgur.com/Mcaue1W.jpg)
 
-Songs Index
 ![image](http://i.imgur.com/zc4VqIv.png)
 
-Songs Show
 ![image](http://i.imgur.com/SZRzS0f.jpg)
 
-Users Show
 ![image](http://i.imgur.com/i6czyCZ.jpg)
